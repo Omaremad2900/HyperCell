@@ -1,0 +1,24 @@
+<div class="note card mb-3" [ngStyle]="{'background-color': note.backgroundColor}">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="title card-title h5" contenteditable="true">{{ note.title }}</div>
+        <div class="delete text-danger" (click)="deleteNote()">
+          <i class="fa-regular fa-trash-can"></i>
+        </div>
+      </div>
+      <!-- Editable content area with fixed white background -->
+      <div class="content card-text  mb-3" contenteditable="true" 
+           style="min-height: 150px; background-color: white; color: black;">
+        {{ note.content }}
+      </div>
+      <div class="date text-muted"><i class="fa-solid fa-clock"></i> {{ note.date }}</div>
+      <div class="colors d-flex justify-content-start mt-3">
+        <div class="color rounded-circle me-2" *ngFor="let color of colors" 
+             [ngStyle]="{'background-color': color}" 
+             style="width: 20px; height: 20px; cursor: pointer;" 
+             (click)="changeBackgroundColor(color)">
+        </div>
+      </div>
+    </div>
+  </div>
+  
