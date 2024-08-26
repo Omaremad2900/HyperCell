@@ -1,0 +1,23 @@
+<header [ngClass]="backgroundClass" class="d-flex justify-content-between align-items-center p-3">
+  <div class="clear-btn btn btn-danger" (click)="clearSearch()">
+    <i class="fa-solid fa-broom"></i> Clear
+  </div>
+
+  <div class="search-box input-group w-50">
+    <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search...">
+    <button class="btn btn-primary">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+  <div class="back-changer">
+    <h2 class="h5">Background</h2>
+    <div class="d-flex">
+      <div class="gradient g-1 bg-primary rounded-circle mx-1" style="width: 30px; height: 30px;" (click)="changeBackground('bg-primary')"></div>
+      <div class="gradient g-2 bg-success rounded-circle mx-1" style="width: 30px; height: 30px;" (click)="changeBackground('bg-success')"></div>
+      <div class="gradient g-3 bg-danger rounded-circle mx-1" style="width: 30px; height: 30px;" (click)="changeBackground('bg-danger')"></div>
+      <div class="gradient g-4 bg-warning rounded-circle mx-1" style="width: 30px; height: 30px;" (click)="changeBackground('bg-warning')"></div>
+      <div class="gradient g-5 bg-dark rounded-circle mx-1 active" style="width: 30px; height: 30px;" (click)="changeBackground('bg-dark')"></div>
+    </div>
+  </div>
+</header>
