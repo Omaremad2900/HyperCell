@@ -1,17 +1,6 @@
 <!-- Navbar component -->
 <app-navbar (backgroundChange)="onBackgroundChange($event)" (ClearChange)="onClear()"></app-navbar>
-
-<!-- Main content of your app with background color change -->
 <div [ngClass]="appBackgroundClass" class="app-content d-flex flex-column min-vh-100 p-3">
-  <!-- "Add Note" Button -->
-  <button class="btn btn-primary align-self-start mb-3" (click)="addNote()">
-    <i class="fa-solid fa-plus"></i> Add Note
-  </button>
-
-  <!-- Use the NoteComponent to render each note -->
-  <app-note *ngFor="let note of notes"
-            [note]="note"
-            (delete)="deleteNote($event)"
-            (changeColor)="changeBackgroundColor($event.noteId, $event.color)">
-  </app-note>
+  <router-outlet></router-outlet>
 </div>
+

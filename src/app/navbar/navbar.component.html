@@ -2,6 +2,8 @@
   <div class="clear-btn btn btn-danger" (click)="clearSearch()">
     <i class="fa-solid fa-broom"></i> Clear
   </div>
+  <button routerLink="/Notes" class="btn btn-primary">Notes</button>
+  <button routerLink="/" class="btn btn-primary">Home</button>
 
   <div class="search-box input-group w-50">
     <input type="text" class="form-control" [(ngModel)]="searchQuery" placeholder="Search...">
@@ -11,6 +13,7 @@
   </div>
 
   <div class="back-changer">
+    
     <h2 class="h5 text-white">Background</h2>
     <div class="d-flex">
       <div class="gradient g-1 bg-primary rounded-circle mx-1" style="width: 30px; height: 30px;" (click)="changeBackground('bg-primary')"></div>
